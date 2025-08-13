@@ -15,7 +15,7 @@ public class Fruver {
         final double PRECIO_BANANO = 800;
 
         Scanner entrada = new Scanner(System.in); 
-        Int Nmanzana, Nbanano; 
+        double Nmanzana, Nbanano; 
         System.out.println("El valor de las manzanas es: " + PRECIO_MANZANA);
         System.out.println("Ingrese el numero de manzanas: ");
         Nmanzana = entrada.nextDouble(); 
@@ -28,16 +28,16 @@ public class Fruver {
         entrada.nextLine();
         System.out.println("El numero que ingresaste es: " + Nbanano);
 
-        double subtotalM, subtotalB, totalC, totalD
+        double subtotalM, subtotalB, totalC, totalD;
         subtotalM =  calcularSubtotal(PRECIO_MANZANA, Nmanzana);
-        subtotalB = (PRECIO_BANANO, Nbanano);
+        subtotalB = calcularSubtotalB(PRECIO_BANANO, Nbanano);
         totalC = totalFrutas(subtotalM, subtotalB);
-        totalD = total(totalFrutas);
+        totalD = total(totalC);
 
 
 
         System.out.println("El subtotal de manzanas es: " + subtotalM);
-        System.out.println("El subtotal de bananos es: " + SubtotalB);
+        System.out.println("El subtotal de bananos es: " + subtotalB);
         System.out.println("El subtotal de su compra es: " + totalC);
         System.out.println("El total de su compra es: " + totalD);
 
@@ -54,7 +54,7 @@ public class Fruver {
     }
 
     public static double totalFrutas(double manzanas, double bananos) {
-        return manzanas + banano;
+        return manzanas + bananos;
     }
 
         public static double total(double totalFrutas) {
